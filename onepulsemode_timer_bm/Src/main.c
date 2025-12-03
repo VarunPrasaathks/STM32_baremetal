@@ -48,7 +48,7 @@
 
 
 // NVIC bit for EXTI1 on Cortex-M3 (IRQ7)  -  from reference manual, will be mentioned as position
-#define EXTI0_NVIC_BIT (1U << 7)
+#define EXTI1_NVIC_BIT (1U << 7)
 
 // EXTI1 ISR
 void EXTI1_IRQHandler(void) {
@@ -91,7 +91,7 @@ int main(){
 	EXTI_PR   =  (1U << 1);  /* clear pending */
 
 	//enable EXTI1 in NVIC_ISER0
-	REG32(NVIC_ISER0) |= (1U<<7);  // can also be mentioned as EXTI0_NVIC_BIT
+	REG32(NVIC_ISER0) |= (1U<<7);  // can also be mentioned as EXTI1_NVIC_BIT
 
 	TIM2_PSC = 7999;  //to generate 1ms ticks
 	TIM2_ARR = 5000;  //5000 * 1ms ticks = 5 sec. I want to generate counters running from 0 to 5 seconds
