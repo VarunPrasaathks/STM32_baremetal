@@ -20,17 +20,19 @@ static void delay(volatile uint32_t count){
 
 
 int main(){
-	REG32(RCC_APB2ENR) |= 1U << 4;
+	REG32(RCC_APB2ENR) |= (1U << 4);
 	delay(1000);
 
 	REG32(GPIOC_CRH) &= ~(0xF << 20);
 	REG32(GPIOC_CRH) |= (0x1U << 20);
+
 
 	while(1){
 		REG32(GPIOC_BSRR) = (1U << (13 + 16));
 		delay(360000);
 		REG32(GPIOC_BSRR) = (1U << 13);
 		delay(360000);
+
 	}
 	return 0;
 }
