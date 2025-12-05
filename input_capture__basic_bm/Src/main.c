@@ -121,7 +121,7 @@ int main(){
 	NVIC_ISER0 |= (1 << 29);   // TIM3 IRQ number = 29
 
 	TIM2_PSC = 7;  //7+1  =8MHz. So 8/8 = 1MHz i.e, 1 us ticks
-	TIM2_ARR = 999; //999 + 1  = 1000;; so 1us * 1000 = 1ms = 1kHz frequency of pulses
+	TIM2_ARR = 999; //999 + 1  = 1000; so 1us * 1000 = 1ms = 1kHz frequency of pulses
 
 	TIM2_CCR1 = 250; //(duty cycle)
 

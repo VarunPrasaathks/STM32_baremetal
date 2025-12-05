@@ -35,7 +35,7 @@ int main(){
 	APB1_ENR = (1U << 0);
 	APB2_ENR = (1U << 2);
 
-	//led at PA0 as o/p push pull
+	//led at PA0 as AF o/p push pull
 	GPIOA_CRL &= ~(0xF << 0);
 	GPIOA_CRL |= (0xA << 0);
 
