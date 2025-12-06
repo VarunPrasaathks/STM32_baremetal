@@ -94,7 +94,7 @@ int main(){
 	REG32(NVIC_ISER0) |= (1U<<7);  // can also be mentioned as EXTI1_NVIC_BIT
 
 	TIM2_PSC = 7999;  //to generate 1ms ticks
-	TIM2_ARR = 5000;  //5000 * 1ms ticks = 5 sec. I want to generate counters running from 0 to 5 seconds
+	TIM2_ARR = 4999;  //5000 * 1ms ticks = 5 sec. I want to generate counters running from 0 to 5 seconds
 
 	//one pulse mode setting
 	TIM2_CR1 |= (1U << 3);
