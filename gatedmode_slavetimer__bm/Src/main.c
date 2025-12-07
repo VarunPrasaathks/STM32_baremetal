@@ -77,7 +77,7 @@ int main(){
 	GPIOA_CRL |=  (0xB << (6 * 4));     // MODE=11 (50MHz), CNF=10 (AF PP)
 
 	TIM3_PSC = 7999;       // 1 ms tick
-	TIM3_ARR = 499;        // 1000 ms
+	TIM3_ARR = 499;        // 500 ms
 	TIM3_CCMR1 &= ~(7 << 4);
 	TIM3_CCMR1 |=  (3 << 4);   // OC1 toggle mode
 	TIM3_CCMR1 &= ~(3 << 0);
