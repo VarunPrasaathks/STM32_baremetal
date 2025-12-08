@@ -58,7 +58,7 @@ void  ADC1_2_IRQHandler(){
 int main(){
 	//configure clocks of portA, TIM2 and ADC1
 	APB1_ENR |= (1 << 0);  //tim2
-	APB2_ENR |= (1 << 0) | (1 << 2) | (1 << 9);  //port a and ADC1
+	APB2_ENR |= (1 << 2) | (1 << 9);  //port a and ADC1
 
 	//enable interrupt
 	NVIC_ISER0 |= (1 << 18);
