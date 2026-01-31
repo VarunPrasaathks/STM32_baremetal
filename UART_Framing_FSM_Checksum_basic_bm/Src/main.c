@@ -101,7 +101,7 @@ void rx_fsm(uint8_t byte){
 
 	case RX_WAIT_LEN:
 		if(byte >= SIZE_OF_BUFFER){
-			rx.state = RX_WAIT_LEN;
+			rx.state = RX_WAIT_SOF;
 		}
 
 		else{
@@ -128,6 +128,8 @@ void rx_fsm(uint8_t byte){
 		}else{
 			rx.state = RX_WAIT_SOF;
 		}
+		break;
+
 
 	case RX_WAIT_EOF:
 		if(byte == 0x55){
