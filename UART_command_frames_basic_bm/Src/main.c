@@ -208,7 +208,7 @@ int main(){
  * LED 1 ON -- < AA 03 01 01 01 00 55 > ---- < SOF LEN CMD LED1 ON XOR(01,01 = 00) EOF>
  * LED 1 OFF-- < AA 03 01 01 00 01 55 > ---- < SOF LEN CMD LED1 OFF XOR(01,00 = 01) EOF>
  * LED 2 ON -- < AA 03 01 02 01 03 55 > ---- < SOF LEN CMD LED2 ON XOR(02,01 = 03) EOF>
- * LED 2 OFF-- < AA 03 01 02 00 02 55 > ---- < SOF LEN CMD LED1 ON XOR(02,00 = 02) EOF>
+ * LED 2 OFF-- < AA 03 01 02 00 02 55 > ---- < SOF LEN CMD LED2 ON XOR(02,00 = 02) EOF>
  *
  * !!! XOR in hexadecimal !!!
  */
