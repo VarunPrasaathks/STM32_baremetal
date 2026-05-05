@@ -58,7 +58,7 @@ The projects are structured in a progressive manner. Follow this order for best 
 
 4. **ADC (Analog to Digital Conversion)**
 
-5. **UART (Communication Protocols)**
+5. **UART**
 
 6. **(Upcoming) SPI / I2C**
 
